@@ -1,0 +1,4 @@
+tidyverse
+directlabels
+latex2exp
+rstan
