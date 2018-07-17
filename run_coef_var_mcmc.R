@@ -20,6 +20,11 @@ coef_var0 <- true_data_params$sigma0/true_data_params$mu0 # true coef var param
 # number of datasets to sample
 R <- 1000
 
+
+# uncommenting the following code will make this script run much faster for debuging purposes
+R <- 10
+n_vals <- c(1, 5)
+
 # Prior parameters --------------------------------------------------------
 
 
@@ -43,7 +48,6 @@ stan_mod <- stan_model("normal.stan")
 # directory/file struction set up -----------------------------------------
 
 # where we save the MCMC results
-results_dir <- 'results/'
 sim_name <- get_sim_name(true_data_params)
 results_dir <- str_c(results_dir, 'coef_var/posterior_samples/', sim_name, '/')
 dir.create(results_dir, showWarnings = T, recursive = T)

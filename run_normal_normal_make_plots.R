@@ -78,18 +78,20 @@ facted_countour_plot <- make_epsilon_countour_plot_mutiple_n(EAPs,
 
 
 # save plots --------------------------------------------------------------
-results_dir <- get_results_dir()
+nn_results_dir <- get_normal_normal_results_dir(results_dir)
 
-ggsave(str_c(results_dir, 'normal_normal_n_vs_epsilon.pdf'), n_vs_epsilon_plt, width=4, height=4)
+# ggsave(str_c(nn_results_dir, 'normal_normal_n_vs_epsilon.pdf'), n_vs_epsilon_plt, width=4, height=4)
+ggsave(str_c(nn_results_dir, 'Figure8.pdf'), n_vs_epsilon_plt, width=4, height=4)
 
-for(i in 1:length(n_vals)){
-    ggsave(str_c(results_dir, 'normal_normal_n', n_vals[i], '.pdf'),
-           countour_plots[[i]],
-           width=4, height=4)
-    
-}
+# for(i in 1:length(n_vals)){
+#     ggsave(str_c(nn_results_dir, 'normal_normal_n', n_vals[i], '.pdf'),
+#            countour_plots[[i]],
+#            width=4, height=4)
+#     
+# }
 
 
-ggsave(str_c(results_dir, 'normal_normal_countour.pdf'), facted_countour_plot, width=9, height=3)
+ggsave(str_c(nn_results_dir, 'normal_normal_countour.pdf'), facted_countour_plot, width=9, height=3)
+ggsave(str_c(nn_results_dir, 'Figure7.pdf'), facted_countour_plot, width=9, height=3)
 
 

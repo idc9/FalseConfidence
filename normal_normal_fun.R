@@ -47,15 +47,16 @@ r_fun <- function(n, theta_0, sigma_0_sq, mu, tau_sq, tau_n_sq){
 }
 
 
-get_results_dir <- function(){
-    str_c(system('sh get_data_dir.sh', intern = T), 'normal_normal/')
+get_normal_normal_results_dir <- function(results_dir){
+    str_c(results_dir, 'normal_normal/')
 }
 
 get_normal_normal_results_fname <- function(results_dir){
     # results_dir <- get_results_dir()
-    dir.create(results_dir, showWarnings = F, recursive = T)
+    normal_results_dir <- get_normal_normal_results_dir(results_dir)
+    dir.create(normal_results_dir, showWarnings = F, recursive = T)
     exper_name <- 'normal_normal_results'
-    fname <- str_c(results_dir, exper_name)
+    fname <- str_c(normal_results_dir, exper_name)
     
     fname
 }

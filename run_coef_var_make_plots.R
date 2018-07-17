@@ -125,6 +125,6 @@ n_vs_epsilon_plt <- eps_vs_n_df %>%
 
 write_csv(eps_vs_n_df, str_c(save_stub, '_n_vs_epsilon.csv'))
 
-eps_vs_n_df <- read_csv(str_c(save_stub, '_n_vs_epsilon.csv'))
-ggsave(str_c(save_stub, '_n_vs_epsilon.pdf'), n_vs_epsilon_plt, width=3, height=3)
+# ggsave(str_c(save_stub, '_n_vs_epsilon.pdf'), n_vs_epsilon_plt, width=3, height=3)
+ggsave(str_c(save_stub, 'Figure9.pdf'), n_vs_epsilon_plt, width=3, height=3)
 

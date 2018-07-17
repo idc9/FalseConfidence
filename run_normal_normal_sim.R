@@ -20,8 +20,11 @@ true_data_params <- list(theta_0 = .1,
 n_vals <- c(1, 5, 10, 20, 50, 100, 200, 500, 1000)   # sample sizes to look at
 
 # number of datasets to sample.
-R <- 1000 # this script will run much faster if R <- 10
+R <- 1000 
 
+# uncommenting the following code will make this script run much faster for debuging purposes
+# R <- 10
+# n_vals <- c(1, 5)
 
 # prior prameters ---------------------------------------------------------
 
