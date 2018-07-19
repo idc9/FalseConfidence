@@ -1,6 +1,8 @@
 # An exposition of the false confidence theorem
 
-The code in this directory can be run to reproduce the results of (Carmichael and Williams, 2018). Before running the below R scripts make sure the libraries listed in requirements.txt are installed (e.g. run `Rscript install_requirements` from the command line). The scripts below assume the code/ is the current working directory.
+The code in this directory can be run to reproduce the results of [(Carmichael and Williams, 2018)](https://arxiv.org/pdf/1807.06217.pdf). Before running the below R scripts make sure the libraries listed in requirements.txt are installed (e.g. run `Rscript install_requirements` from the command line). The scripts below assume the code/ is the current working directory.
+
+The arxiv submission of the paper can be found here: [https://arxiv.org/pdf/1807.06217.pdf](https://arxiv.org/pdf/1807.06217.pdf).
 
 ## Section 2 (Main ideas)
 
